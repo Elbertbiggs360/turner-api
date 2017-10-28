@@ -3,7 +3,7 @@ Test the cinema models
 '''
 
 from django.test import TestCase
-from turnercyn.api.tests.test_basecase import ModelTestCase
+from api.tests.test_basecase import ModelTestCase
 from ..models import Cinema
 
 class CinemaTestCase(ModelTestCase):
