@@ -5,7 +5,7 @@ Serializers for the models
 from rest_framework import serializers
 from .models import Cinema
 
-class CinemaSerializer(serializers.Serializer):
+class CinemaSerializer(serializers.ModelSerializer):
     '''
     Serializer to map cinema model into json instance
     '''
