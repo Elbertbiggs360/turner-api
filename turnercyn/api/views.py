@@ -10,7 +10,7 @@ from .models import Cinema
 
 class CreateCinemaView(generics.ListCreateAPIView):
     '''
-    Defines create behavior for API
+    Defines create behavior for cinema
     '''
     queryset = Cinema.objects.all()
     serializer_class = CinemaSerializer
@@ -27,3 +27,10 @@ class CreateCinemaView(generics.ListCreateAPIView):
             serializer.data,
             status=status.HTTP_201_CREATED,
             headers=headers)
+
+class CinemaDetailsView(generics.RetrieveUpdateDestroyAPIView):
+    '''
+    Defines the update and destroy behavior of the Cinema resource
+    '''
+    queryset = Cinema.objects.all()
+    serializer_class = CinemaSerializer
